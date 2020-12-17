@@ -56,7 +56,7 @@ class HashMap:
         """
 
                                                                                             # sets each index of hashmap to have an empty linked list value and size of 0
-        for index in range(0, self.capacity):                                               # Capacity is set during initialization
+        for index in range(0, self.capacity):                                               # capacity is set during initialization
             self.buckets.set_at_index(index, (LinkedList()))
             self.size = 0
 
@@ -67,7 +67,7 @@ class HashMap:
         returns the value associated with the given key
         """
 
-        if self.contains_key(key) == False:
+        if self.contains_key(key) == False:                                                 # if the hashmap doesn't have the key, then return None                           
             return None
 
         else:
