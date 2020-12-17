@@ -55,8 +55,8 @@ class HashMap:
         clears the content of the hash map
         """
 
-        #sets each index of hashmap to have an empty linked list value and size of 0
-        for index in range(0, self.capacity):
+                                                                                            # sets each index of hashmap to have an empty linked list value and size of 0
+        for index in range(0, self.capacity):                                               # Capacity is set during initialization
             self.buckets.set_at_index(index, (LinkedList()))
             self.size = 0
 
