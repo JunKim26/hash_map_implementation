@@ -73,7 +73,7 @@ class HashMap:
         else:
             hash = self.hash_function(key)
             size = self.capacity
-            index = hash % size
+            index = hash % size                                                             # the hash function can vary
 
             return self.buckets.get_at_index(index).contains(key).value
 
