@@ -1,5 +1,5 @@
 # Author: Jun Kim
-# Description: In this program we will implement a HashMap class
+# Description: In this program, a HashMap class is implemented. Another file in the same director is used to import functions that define a node, linked list, and a dynamic array.
 
 
 # Import pre-written DynamicArray and LinkedList classes
