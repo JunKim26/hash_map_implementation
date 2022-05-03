@@ -55,8 +55,8 @@ class HashMap:
         clears the content of the hash map
         """
 
-                                                                                            # sets each index of hashmap to have an empty linked list value and size of 0
-        for index in range(0, self.capacity):                                               # capacity is set during initialization
+        # sets each index of hashmap to have an empty linked list value and size of 0
+        for index in range(0, self.capacity):                                               
             self.buckets.set_at_index(index, (LinkedList()))
             self.size = 0
 
@@ -67,13 +67,13 @@ class HashMap:
         returns the value associated with the given key
         """
 
-        if self.contains_key(key) == False:                                                 # if the hashmap doesn't have the key, then return None                           
+        if self.contains_key(key) == False:                                                                      
             return None
 
         else:
             hash = self.hash_function(key)
             size = self.capacity
-            index = hash % size                                                             # the hash function can vary
+            index = hash % size                                                             
 
             return self.buckets.get_at_index(index).contains(key).value
 
@@ -90,8 +90,9 @@ class HashMap:
         index = hash % size
 
         linked = self.buckets.get_at_index(index)
-
-        if linked.contains(key) != None: #if they share the same key, replace value
+        
+        #if they share the same key, replace value
+        if linked.contains(key) != None: 
             linked.remove(key)
             linked.insert(key, value)
 
